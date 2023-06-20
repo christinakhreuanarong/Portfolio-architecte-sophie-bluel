@@ -84,6 +84,7 @@ h2{
 	font-size: 30px;
 	color: #1D6154
 }
+
 nav ul {
 	display: flex;
 	align-items: center;
@@ -94,6 +95,12 @@ nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
 }
+nav a {
+	text-decoration: none;
+}
+nav a:visited {
+	color: black;
+  }
 
 li:hover {
 	color: #B1663C;
@@ -121,10 +128,55 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
+figure a {
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 3%;
+	padding-left: 10%;
+	margin-right: 5%;
+	color: black;
+	text-decoration: none;
+}
+.modifier-button {
+	margin-left: 5px;
+}
 #portfolio h2 {
 	text-align: center;
 	margin-bottom: 1em;
 }
+#portfolio h2 {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 3%;
+}
+.filter {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+  }
+  
+  .filter button {
+	margin-right: 10px;
+	padding: 5px 10px;
+	font-size: 14px;
+	border: none;
+	color: #1D6154;
+	background-color: white;
+	border-radius: 60px;
+	border: 1px solid #1D6154;
+	cursor: pointer;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+  }
+  
+  .filter button:hover {
+	background-color: #1D6154;
+	color: white;
+  }
+  
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -139,7 +191,7 @@ li:hover {
 }
 #contact {
 	width: 50%;
-margin: auto;
+	margin: auto;
 }
 #contact > * {
 	text-align: center;
@@ -185,4 +237,76 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em
 }
+
+/* page de loggin */
+
+.login-title {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 3%;
+}
+
+.connexion {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1%;
+	justify-content: center;
+	padding-left: 40%;
+	padding-right: 40%;
+}
+
+
+label {
+	margin-bottom: 1%;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	padding-top: 10%;
+}
+
+input[type="text"]  {
+	padding: 5%;
+	width: 100%;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="password"]  {
+	padding: 5%;
+	width: 100%;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.submit-button {
+	display: flex;
+	justify-content: center;
+	height: 50px;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	cursor: pointer;
+}
+
+a.password-link {
+	display: flex;
+	justify-content: center;
+	color: black;
+	font-family: 'Work Sans';
+	font-weight: 500;
+	font-size: 14px;
+}
+a.password-link:visited {
+	color: black;
+  }
+
+.footer-text {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 15%;
+}
+
+
 
