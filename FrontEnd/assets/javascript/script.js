@@ -3,7 +3,6 @@ fetch('http://localhost:5678/api/works')
     return res.json();
   })
   .then(function (data) {
-    console.log(localStorage.getItem("token"));
     const gallery = document.querySelector(".gallery");
     let works = "";
     for (let i in data) {
@@ -45,13 +44,39 @@ fetch('http://localhost:5678/api/categories')
           project.style.display = "none";
           if (project.getAttribute("data-category") === categoryId || categoryId === "all") {
             project.style.display = "block";
-          } 
+          }
         })
       });
     });
-
   })
 
+// affiche les liens pour l'admin du site
+function afficheLiensAdmin() {
+  // cache les boutons modifier
+  const boutonsModifier = document.querySelectorAll('.modifier-link');
+  boutonsModifier.forEach((bouton) => {
+    bouton.style.display = 'none';
+
+    const barreNoir = document.querySelector('.black-bar');
+    barreNoir.style.display = 'none';
+  })
+
+  // affiche les liens si le token est présent  
+  if (localStorage.getItem("token") !== null) {
+    // affiche les boutons modifier
+    boutonsModifier.forEach((bouton) => {
+      bouton.style.display = 'block';
+    })
+    // affiche la barre noir
+    const barreNoir = document.querySelector('.black-bar');
+    barreNoir.style.display ='block';
+
+    // cache les filtres 
+    const boutonFiltre = document.querySelector('.filter');
+    boutonFiltre.style.display = 'none';
+  }
+}
+afficheLiensAdmin();
 
 
 

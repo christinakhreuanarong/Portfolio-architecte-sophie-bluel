@@ -5,7 +5,6 @@ loginForm.addEventListener('submit', function (event) {
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-console.log(email);
 
     fetch('http://localhost:5678/api/users/login', {
         method: 'POST',
@@ -19,10 +18,7 @@ console.log(email);
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            // Gérer la réponse du backend
             if (data.token !== undefined) {
-                console.log(data.token)
                 localStorage.setItem("token", data.token);
                 // Rediriger l'utilisateur vers une autre page
                 window.location.href = 'index.html';
@@ -34,4 +30,5 @@ console.log(email);
         .catch(error => {
             console.error('Erreur:', error);
         });
+
 });

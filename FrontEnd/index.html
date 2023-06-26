@@ -9,12 +9,20 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
 		rel="stylesheet">
-		<script src="https://kit.fontawesome.com/bb607858aa.js" crossorigin="anonymous"></script> 
+	<script src="https://kit.fontawesome.com/bb607858aa.js" crossorigin="anonymous"></script>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
+	<section id="black-bar">
+		<p class="first-text">
+			<i class="fa-regular fa-pen-to-square"></i>
+			<span class="text-bar">Mode édition</span>
+		</p>
+		<p class="second-text">publier les changements</p>
+	</section>
+	<div class="main-container">
 	<header>
 		<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 		<nav>
@@ -30,11 +38,11 @@
 	<main>
 		<section id="introduction">
 			<figure>
-				<img src="./assets/images/sophie-bluel.png" alt=""> 
-				<a href="#" class="hide"> 
+				<img src="./assets/images/sophie-bluel.png" alt="">
+				<a href="#" class="modifier-link">
 					<i class="fa-regular fa-pen-to-square"></i>
-				<span class="modifier-button">modifier</span>   
-			</a>
+					<span class="modifier-button">modifier</span>
+				</a>
 			</figure>
 			<article>
 				<h2>Designer d'espace</h2>
@@ -48,10 +56,16 @@
 			</article>
 		</section>
 		<section id="portfolio">
-			<h2>Mes projets</h2>
+			<h2>Mes projets
+				<a href="#" class="modifier-link" >
+					<div class="icone"> 
+					<i class="fa-regular fa-pen-to-square"></i>
+					<span class="modifier-button">modifier</span>
+					</div>
+				</h2>
+				</a>				
 			<div class="filter"></div>
-			<div class="gallery">
-			</div>
+			<div class="gallery"></div>
 		</section>
 		<section id="contact">
 			<h2>Contact</h2>
@@ -75,5 +89,8 @@
 		</nav>
 	</footer>
 	<script src="./assets/javascript/script.js" defer></script>
+	<script src=".assets/javascript/login.js" defer></script>
+</div>
 </body>
+
 </html>
