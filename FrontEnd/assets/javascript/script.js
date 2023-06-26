@@ -57,7 +57,7 @@ function afficheLiensAdmin() {
   boutonsModifier.forEach((bouton) => {
     bouton.style.display = 'none';
 
-    const barreNoir = document.querySelector('.black-bar');
+    const barreNoir = document.getElementById('black-bar');
     barreNoir.style.display = 'none';
   })
 
@@ -68,9 +68,9 @@ function afficheLiensAdmin() {
       bouton.style.display = 'block';
     })
     // affiche la barre noir
-    const barreNoir = document.querySelector('.black-bar');
-    barreNoir.style.display ='block';
-
+    const barreNoir = document.getElementById('black-bar');
+    barreNoir.style.display ='flex';
+  
     // cache les filtres 
     const boutonFiltre = document.querySelector('.filter');
     boutonFiltre.style.display = 'none';
